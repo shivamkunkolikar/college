@@ -1,0 +1,58 @@
+Algorithms
+
+(1) Linear Search
+   Step 1 : Start 
+   Step 2 : Compare search key with record
+   Step 3 : if it is same return that record
+   Step 4 : else repeat step 2 & 3 until all records are read
+   Step 5 : if record not found return -1
+   Step 6 : Stop 
+
+(2) Binary Search
+   Step 1 : Start
+   Step 2 : Take low, high and search key as input
+   Step 3 : goto mid by (low + high) / 2
+   Step 4 : if Record at mid is same as serch key return that Record
+   step 5 : if High is equal to low return -1 
+   Step 6 : if search key is less mid Record 
+               - Repeat from Step 2 by taking high as mid - 1
+   Step 7 : if search key is greater than mid record
+   Step 8 :    - Repeat from Step 2 by taking low as mid + 1
+   Step 9 : Stop
+
+(3) Linear Probing
+   Step 1 : Start
+   Step 2 : Check record at location = hash(key)
+   Step 3 : if record present at that location matches with key
+               - return that record
+   Step 4 : else check at location = (hash(key) + i) mod Tsize
+   Step 5 : if record present at that location matches with key
+               - return that record
+   Step 6 : else repeat from step 4 by increasing i by 1 until all records read
+   Step 7 : if record not found return -1
+   Step 8 : Stop
+
+(4) Quadratic Probing
+   Step 1 : Start
+   Step 2 : Check record at location = hash(key)
+   Step 3 : if record present at that location matches with key
+               - return that record
+   Step 4 : else check at location = (hash(key) + i*i) mod Tsize
+   Step 5 : if record present at that location matches with key
+               - return that record
+   Step 6 : else repeat from step 4 by increasing i by 1 until all records read
+   Step 7 : if record not found return -1
+   Step 8 : Stop
+
+(5) Double Hashing
+   Step 1 : Start
+   Step 2 : Check record at location = hash(key)
+   Step 3 : if record present at that location matches with key
+               - return that record
+   Step 4 : else check at location = (hash(key) + i(h_dash(key))) mod Tsize
+               -where h_dash() is double hash function
+   Step 5 : if record present at that location matches with key
+               - return that record
+   Step 6 : else repeat from step 4 by increasing i by 1 until all records read
+   Step 7 : if record not found return -1
+   Step 8 : Stop
